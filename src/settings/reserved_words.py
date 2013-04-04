@@ -1,0 +1,21 @@
+# Reserved Words
+reserved_words = {
+    'class'		: 'CLASS',
+    'return'	: 'RETURN',
+    'this'		: 'THIS',
+    'extends'	: 'EXTENDS',
+    'if'		: 'IF',
+    'new'		: 'NEW',
+    'void'		: 'VOID',
+    'else'     	: 'ELSE',
+    'lenght'   	: 'LENGHT',
+    'int'      	: 'INT',
+    'while'    	: 'WHILE',
+    'true'     	: 'TRUE',
+    'boolean'  	: 'BOOLEAN',
+    'break'		: 'BREAK',
+    'false'		: 'FALSE',
+    'string'   	: 'STRING',
+    'continue' 	: 'CONTINUE',
+    'null'     	: 'NULL',
+}
