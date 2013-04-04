@@ -1,37 +1,10 @@
 # TOKENS LIST
 tokens = [
-    #ARITMETIC OPERATORS
-    'ADICION',
-    'SUBSTRACCION',
-    'MULTIPLICACION',
-    'DIVISION',
-    'MODULO',
-    'ASIGNACION'
-
-    #OPERADORES DE COMPARACION RELACIONAL
-    'MENORQ',
-    'MENOROIGUAL',
-    'MAYORQ',
-    'MAYOROIGUAL',
-
-    # OPERADORES DE COMPARACION DE IGUALDAD
-    'DIFERENTE',
-    'DOBLEIGUAL',
-
-    #OPERADORES LOGICOS
-    'OR',
-    'AND',
-
-    #OPERADORES UNARIOS
-    'CAMBIOSIGNO',
-    'NEGACIONLOGICA',
-
-    #DATOS
-    'TABULAR',
-    'NUEVALINEA',
-    'CADENA',
-
-    #TIPOS DE NUMEROS
-    'HEXAGEXIMAL',
-    'ENTERO',
+    'ADD', 'SUB', 'MULT', 'DIV', 'RO', 'SAO',
+    'LT', 'LTE', 'GT', 'GTE',
+    'NET', 'ET',
+    'OR', 'AND',
+    'UMO', 'LCO',
+    'TAB', 'NL', 'STR',
+    'HEX', 'INT',
 ]

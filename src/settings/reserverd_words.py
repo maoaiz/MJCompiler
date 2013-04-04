@@ -9,7 +9,7 @@ reserved_words = {
     'void'		: 'VOID',
     'else'     	: 'ELSE',
     'lenght'   	: 'LENGHT',
-    'int'      	: 'INT',
+    'Int'      	: 'INT',
     'while'    	: 'WHILE',
     'true'     	: 'TRUE',
     'boolean'  	: 'BOOLEAN',
@@ -17,5 +17,5 @@ reserved_words = {
     'false'		: 'FALSE',
     'string'   	: 'STRING',
     'continue' 	: 'CONTINUE',
-    'null'     	: 'NULL',
+    'Null'     	: 'NULL',
 }
