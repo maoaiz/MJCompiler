@@ -17,6 +17,7 @@ t_OR = r'^\|\|$'    # Conditional Or
 t_AND = r'^&&$'		# Conditional And
 t_UMO = r'^-$'		# Unary Minus Operator
 t_LCO = r'^!$'		# Logical Complement Operator
+# t_IDE = r'\w+'
 
 
 def t_INT(t):
@@ -40,6 +41,17 @@ def t_HEX(t):
 
 
 def t_IDE(t):
-    r'^[a-zA-Z_]{1}\w+$'
-    t.value = t[:20]
+    r'[a-zA-Z_]{1}\w+'
+    t.value = t.value[:20]
     return t
+
+
+def t_newline(t):
+    r'\n+'
+    t.lexer.lineno += t.value.count("\n")
+    return t
+
+
+def t_error(t):
+    print "Illegal character '%s'" % t.value[0]
+    t.lexer.skip(1)
