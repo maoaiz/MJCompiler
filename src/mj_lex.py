@@ -11,8 +11,6 @@ class MJLex():
 
     def __init__(self):
         self.valid_tokens = self.validateTokens("src/settings/tokens_re.py")
-        # super(MJLex, self).__init__()
-        # self.arg = arg
 
     def validateTokens(self, path):
         tokens_re_file = os.path.realpath(path)
@@ -28,18 +26,22 @@ class MJLex():
         """
         String input_file
         """
-        print "\n-------MJCompiler-------\n\nby @MaoAiz & @edwinfmesa\n\n"
-        a = lex.lex()
-        a.input(input_file)
-        print "Analyzing your code..."
+        if valid_tokens:
+            print "\n-------MJCompiler-------\n\nby @MaoAiz & @edwinfmesa\n\n"
+            a = lex.lex()
+            a.input(input_file)
+            print "Analyzing your code..."
 
-        while True:
-            try:
-                tok = a.token()
-                if not tok:
-                    break  # No more input
-                print "\t", tok
-            except Exception, e:
-                tok = "ERROR:", e
-        print "analysis completed"
-        return True
+            while True:
+                try:
+                    tok = a.token()
+                    if not tok:
+                        break  # No more input
+                    print "\t", tok
+                except Exception, e:
+                    tok = "ERROR:", e
+            print "analysis completed"
+            return True
+        else:
+            print "Error 500, vuelve mas tarde"
+        return False
