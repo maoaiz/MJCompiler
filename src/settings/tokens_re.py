@@ -17,7 +17,6 @@ t_OR = r'^\|\|$'    # Conditional Or
 t_AND = r'^&&$'		# Conditional And
 t_UMO = r'^-$'		# Unary Minus Operator
 t_LCO = r'^!$'		# Logical Complement Operator
-# t_IDE = r'\w+'
 
 
 def t_INT(t):
@@ -46,10 +45,32 @@ def t_IDE(t):
     return t
 
 
+def t_SPA(t):
+    r'\ '
+    t.value = t.value.count(" ")
+    # return t
+
+
+def t_TAB(t):
+    r'\t+'
+    t.lexer.lineno += t.value.count("\t")
+
+
+def t_STR1(t):
+    r'\".*\"'
+    # t.lexer.lineno += t.value.count("\t")
+    # t.value = t.value
+    return t
+
+
+def t_STR2(t):
+    r'\'.*\''
+    return t
+
+
 def t_NL(t):
     r'\n+'
     t.lexer.lineno += t.value.count("\n")
-    return t
 
 
 def t_error(t):

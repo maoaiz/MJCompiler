@@ -26,7 +26,7 @@ class MJLex():
         """
         String input_file
         """
-        if valid_tokens:
+        if self.valid_tokens:
             print "\n-------MJCompiler-------\n\nby @MaoAiz & @edwinfmesa\n\n"
             a = lex.lex()
             a.input(input_file)
@@ -37,7 +37,7 @@ class MJLex():
                     tok = a.token()
                     if not tok:
                         break  # No more input
-                    print "\t", tok
+                    print "Type: %s\ttoken: %s\tline %s" % (tok.type, tok.value, tok.lineno)
                 except Exception, e:
                     tok = "ERROR:", e
             print "analysis completed"
@@ -45,3 +45,8 @@ class MJLex():
         else:
             print "Error 500, vuelve mas tarde"
         return False
+
+cad = '"hola"'
+MJLex().MJLexer(cad)
+cad = "'mundo'"
+MJLex().MJLexer(cad)

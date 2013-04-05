@@ -5,9 +5,11 @@ tokens = [
     'NET', 'ET',
     'OR', 'AND',
     'UMO', 'LCO',
-    # 'TAB',
+    'TAB',
     'NL',
-    # 'STR',
+    'STR1',
+    'STR2',
+    'SPA',
     'HEX', 'INT',
     'IDE'
 ]
