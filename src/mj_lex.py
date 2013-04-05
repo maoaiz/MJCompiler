@@ -4,8 +4,9 @@ from settings.tokens import tokens
 from settings.tokens_re import *
 import os
 
-# print lex
-tokens_re_file =  os.path.realpath("src/tokens_re.py")
-print lex._validate_file(tokens_re_file)
-# print tokens
-# print "SUMA", t_ADD
+tokens_re_file = os.path.realpath("src/settings/tokens_re.py")
+is_valid_tokens_re_file = lex._validate_file(tokens_re_file)
+if is_valid_tokens_re_file:
+    print tokens_re_file, "is good"
+else:
+    print tokens_re_file, "not is good"
